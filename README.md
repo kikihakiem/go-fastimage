@@ -1,6 +1,6 @@
 # fastimage
 
-[![GoDoc](https://godoc.org/github.com/rubenfonseca/fastimage?status.png)](https://godoc.org/github.com/rubenfonseca/fastimage) [![Build Status](https://travis-ci.org/rubenfonseca/fastimage.svg?branch=master)](http://travis-ci.org/rubenfonseca/fastimage) [![wercker status](https://app.wercker.com/status/99926bf6ba7846259d5f65de5c5b4ed1/m "wercker status")](https://app.wercker.com/project/bykey/99926bf6ba7846259d5f65de5c5b4ed1)
+[![GoDoc](https://godoc.org/github.com/rubenfonseca/fastimage?status.png)](https://godoc.org/github.com/rubenfonseca/fastimage) ![Run tests](https://github.com/kikihakiem/go-fastimage/workflows/Run%20tests/badge.svg)
 
 by Ruben Fonseca (@[rubenfonseca](http://twitter.com/rubenfonseca))
 
