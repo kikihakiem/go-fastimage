@@ -1,21 +1,19 @@
 name: Run tests
 
-on:
-  push:
-    # We want to run the workflow on all branches.
-    branches:
-      - "*"
-
+on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        go: [ '1.4', '^1.14' ]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        go: [ '1.11', '1.14' ]
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup go
+      - name: Checkout source code
+        uses: actions/checkout@v2
+      - name: Setup Go
         uses: actions/setup-go@v1
         with:
           go-version: ${{ matrix.go }}
-      - run: go test ./...
+      - name: Run tests
+        run: go test -v .
