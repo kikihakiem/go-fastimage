@@ -112,9 +112,11 @@ func TestTIFFImage(t *testing.T) {
 func TestCustomTimeout(t *testing.T) {
 	t.Parallel()
 
-	url := "http://loremflickr.com/500/500"
+	// append random param to avoid caching
+	url := "http://slowwly.robertomurray.co.uk/delay/10000/url/http://loremflickr.com/500/500"
 
 	imagetype, size, err := DetectImageTypeWithTimeout(url, 1000)
+	t.Logf("imageURL: %v", url)
 	t.Logf("imageType: %v", imagetype)
 	t.Logf("size: %v", size)
 	t.Logf("error: %v", err)
